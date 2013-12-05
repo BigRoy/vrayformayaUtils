@@ -25,7 +25,7 @@ There might be a focus in the future to do some (PySide?) GUI elements that aid 
 
 You can find the documentation for this library/framework at:
 
-[vrayformayaUtils Documentation](http://www.colorbleed.nl/docs/vrayformayaUtils/index.html)
+####[vrayformayaUtils Documentation](http://www.colorbleed.nl/docs/vrayformayaUtils/index.html)
 
 ### Why use this framework?
 
