@@ -21,22 +21,27 @@ main areas (attributes and objectProperties) that benefit from automatisation.
 
 There might be a focus in the future to do some (PySide?) GUI elements that aid in the v-ray for maya workflow.
 
+
 ### Documentation
 
 You can find the documentation for this library/framework at:
 
 ####[vrayformayaUtils Documentation](http://www.colorbleed.nl/docs/vrayformayaUtils/index.html)
 
+
 ### Why use this framework?
 
 - Get started fast!
 - Simplicity.
 - Error-checking built-in.
-- There's actually documentation built-in.
+- User-friendly.
+- There's actually documentation for it. :)
+- 
 
 ### Examples
 
 Example code can also be found in the documentation. (see documentation)
+
 
 ### Appendices
 
