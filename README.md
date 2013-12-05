@@ -27,6 +27,18 @@ You can find the documentation for this library/framework at:
 
 [vrayformayaUtils Documentation](http://www.colorbleed.nl/docs/vrayformayaUtils/index.html)
 
+### Why use this framework?
+
+- Get started fast!
+- Simplicity.
+- Error-checking built-in.
+- There's actually documentation built-in.
+
 ### Examples
 
 Example code can also be found in the documentation. (see documentation)
+
+### Appendices
+
+- [Documentation for V-Ray for Maya (Official Chaosgroup)](<http://help.chaosgroup.com/vray/help/maya/150R1/>)
+- [Scripting Documentation for V-Ray for Maya (GitHub Repository)](https://github.com/BigRoy/mayaVrayCommandDocs/)
