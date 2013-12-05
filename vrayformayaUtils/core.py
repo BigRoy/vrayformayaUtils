@@ -1,6 +1,10 @@
 import maya.cmds as mc
 import maya.mel as mel
 
+def loadVray():
+    """ Loads the v-ray plug-in """
+    return mc.loadPlugin("vrayformaya.mll", quiet=True)
+
 def getRenderElementClassType(renderElement):
     """ Return the vrayClassType from a render element node.
 
@@ -83,7 +87,7 @@ def addRenderElement(vrayClassType, enabled=True, name=None, suffix=None, **kwar
     if suffix is not None:
         mc.setAttr("{0}.vray_name_multimatte".format(node), suffix, type="string")
 
-    for kw, value in kwargs:
+    for kw, value in kwargs.iteritems():
         if kw.startswith("vray"):
             nodeAttr = "{0}.{1}".format(node, kw)
             if not mc.objExists(nodeAttr):
