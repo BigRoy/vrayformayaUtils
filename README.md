@@ -36,7 +36,7 @@ You can find the documentation for this library/framework at:
 - Error-checking built-in.
 - User-friendly.
 - There's actually documentation for it. :)
-- 
+
 
 ### Examples
 
