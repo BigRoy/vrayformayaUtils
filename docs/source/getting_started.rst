@@ -109,3 +109,45 @@ experimental functionality. You could do:
                                              vray_greenid_multimatte=x+2)
 
 Fore more information about the core functions have a look at the :doc:`core` documentation.
+
+Adding V-Ray Object Properties
+------------------------------
+
+Currently we have an experimental implementation that should already give you full control over your v-ray object
+properties.
+
+To add some ``VRayObjectProperties`` to your current selection:
+
+.. code-block:: python
+
+    import vrayformayaUtils as vfm
+
+    vfm.objectProperties.objectProperties("add_single", "VRayObjectProperties")
+
+
+To remove the ``VRayObjectProperties`` on your current selection:
+
+.. code-block:: python
+
+    import vrayformayaUtils as vfm
+
+    vfm.objectProperties.objectProperties("remove", "VRayObjectProperties")
+
+To add the ``VRayDisplacement`` object properties seperate to every object in your current selection:
+
+.. code-block:: python
+
+    import vrayformayaUtils as vfm
+
+    vfm.objectProperties.objectProperties("add_multiple", "VRayDisplacement")
+
+To add the ``VRayRenderableCurve`` object properties to all nurbsCurves in your scene and name the node
+``renderCurveProperties``:
+
+.. code-block:: python
+
+    import maya.cmds as mc
+    import vrayformayaUtils as vfm
+
+    nodes = mc.ls(type="nurbsCurve")
+    vfm.objectProperties.objectProperties("add_single", "VRayRenderableCurve", nodes=nodes, name="renderCurveProperties")

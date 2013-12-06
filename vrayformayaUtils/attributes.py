@@ -29,8 +29,8 @@
 
         Some functions might have an allowTransform parameter. This is used for functions that can be applied to
         both shapes as well as transforms. Setting this parameter to True will interpret transform nodes as actual
-        nodes to add the attributes to (instead of trying to do a smartConvert). Note that setting allowTransform
-        to True actually forces smartConvert to False.
+        nodes to add the attributes to (instead of trying to do a smartConvert to a shape). Note that setting
+        allowTransform to True actually forces smartConvert to False.
 
     - **Include all descendent shapes (allDescendents parameter)**
 
@@ -1413,7 +1413,7 @@ def vray_file_ifl(nodes=None,
                      vrayFileIFLPlaybackRate=None):
     """ Add/change the Texture input Gamma (vray_file_ifl) attribute to input nodes.
 
-    Valid node types: (file, VRayPTex, Substance nodes, imagePlane)
+    Valid node types: (file)
 
     :param nodes: nodes to apply the attribute to. If nodes is None it will get
                   the nodes related to the current selection.

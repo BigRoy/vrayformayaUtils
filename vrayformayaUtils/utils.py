@@ -109,3 +109,30 @@ def getShapes(nodes=None,
         shapes = mc.ls(shapes, long=fullPath)
 
     return shapes
+
+
+def getConnectedSets(nodes, type=None):
+    """ Return the sets that are connected to nodes
+
+    :param nodes: The nodes to get the sets from.
+    :type  nodes: str, list
+
+    :param type: If type is provided the sets returned will be filtered to type.
+    :type  type: str, tuple
+
+    :rtype: list
+    """
+    # Sets are connected to outputs of a node
+    out_connections = mc.listConnections(nodes, source=False, destination=True)
+    if not out_connections:
+        return []
+
+    # If type is provided we use it as a keyword argument for the `ls` command.
+    kwargs = {}
+    if type is not None:
+        kwargs['type'] = type
+
+    # Filter to sets (and possibly by type) only.
+    connected_sets = mc.ls(out_connections, sets=True, **kwargs)
+
+    return connected_sets

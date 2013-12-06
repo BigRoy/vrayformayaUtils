@@ -25,6 +25,7 @@ Contents:
    getting_started
    core
    attributes
+   objectProperties
    utils
 
 Appendices:
