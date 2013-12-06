@@ -1,5 +1,5 @@
 """
-    The `objectProperies` eases managing V-ray object properties nodes..
+    The `objectProperties` module eases managing V-ray object properties nodes..
 
     It provides a convenient way of doing everything that ``mc.vray("objectProperties", ..)`` does, and more!
 
@@ -17,7 +17,7 @@
 
     - **Apply to nodes list (nodes parameter)**
 
-        Instead of forcing you to operate on the current selection (like Chaosgroup is doing) out method contains a
+        Instead of forcing you to operate on the current selection (like Chaosgroup is doing) our method contains a
         nodes parameter that allows you to operate on the list you provide yourself.
 
 

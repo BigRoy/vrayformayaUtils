@@ -151,3 +151,5 @@ To add the ``VRayRenderableCurve`` object properties to all nurbsCurves in your 
 
     nodes = mc.ls(type="nurbsCurve")
     vfm.objectProperties.objectProperties("add_single", "VRayRenderableCurve", nodes=nodes, name="renderCurveProperties")
+
+Fore more information about the objectProperties functions have a look at the :doc:`objectProperties` documentation.
