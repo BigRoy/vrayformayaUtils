@@ -19,12 +19,12 @@ meshes, nurbsSurfaces and nurbsCurves.
     offset = -amount/2.0
     spacing_size = 2.0
     for x in range(amount):
-    for y in range(amount):
-        object = random.choice(funcs)()
-        mc.move(spacing_size*(offset+x),
-                spacing_size*(offset+y),
-                0,
-                object)
+        for y in range(amount):
+            object = random.choice(funcs)()
+            mc.move(spacing_size*(offset+x),
+                    spacing_size*(offset+y),
+                    0,
+                    object)
 
 Your scene is looking great. Because you're a V-ray fan you've already double checked whether V-ray for Maya is loaded
 in the plug-in manager. If you didn't then make sure you do now.
