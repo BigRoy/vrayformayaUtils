@@ -34,7 +34,7 @@ def objectProperties(cmd,
                      name=None):
     """ Adds/removes objectProperties to/from input nodes.
 
-    This is currently an experimental implementation, behaviour and naming of functions/keywords may change.
+    This is currently an EXPERIMENTAL IMPLEMENTATION, behaviour and naming of functions/keywords may change.
     Even though our focus is to stay as backwards compatible as possible we can't ensure this in the long run
     for experimental implementations.
 

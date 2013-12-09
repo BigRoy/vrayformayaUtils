@@ -1,9 +1,67 @@
 import maya.cmds as mc
 import maya.mel as mel
 
+
 def loadVray():
     """ Loads the v-ray plug-in """
     return mc.loadPlugin("vrayformaya.mll", quiet=True)
+
+
+def vrayStartBake():
+    """ Python implementation of the mel command ``vrayStartBake``.
+
+    # Untested Development Code.
+
+    This is currently an EXPERIMENTAL IMPLEMENTATION, behaviour and naming of functions/keywords may change.
+    Even though our focus is to stay as backwards compatible as possible we can't ensure this in the long run
+    for experimental implementations.
+    """
+    currentLayer = mc.editRenderLayerGlobals(q=1, currentRenderLayer=True)
+    return vrayRender(camera="persp", layer=currentLayer, bake=True)
+
+
+def vrayRender(camera="persp", layer=None, bake=False, batch=False):
+    """ Starts a v-ray render in the render view (or Vray framebuffer if enabled).
+
+    # Untested Development Code.
+
+    This is currently an EXPERIMENTAL IMPLEMENTATION, behaviour and naming of functions/keywords may change.
+    Even though our focus is to stay as backwards compatible as possible we can't ensure this in the long run
+    for experimental implementations.
+
+    :param camera: The camera used to render. (Defaults to "persp")
+    :type camera: str
+
+    :param layer: The renderlayer to render.
+    :type layer: str
+
+    :param bake: Bakes the stuff in the scene. This uses the bake settings that are already in the scene.
+    :type bake: bool
+
+    :rtype: str
+    """
+    cmds = []
+
+    if not mc.objExists(camera):
+        raise RuntimeError("Camera {0} doesn't exist.".format(camera))
+
+    cmds.append("-camera")
+    cmds.append(camera)
+
+    if layer is None:
+        layer = mc.editRenderLayerGlobals(q=1, currentRenderLayer=True)
+
+    cmds.append("-layer")
+    cmds.append(layer)
+
+    if bake:
+        cmds.append("-bake")
+
+    if batch:
+        cmds.append("-batch")
+
+    return mc.vrend(*cmds)
+
 
 def getRenderElementClassType(renderElement):
     """ Return the vrayClassType from a render element node.
