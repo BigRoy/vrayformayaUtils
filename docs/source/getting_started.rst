@@ -153,3 +153,32 @@ To add the ``VRayRenderableCurve`` object properties to all nurbsCurves in your 
     vfm.objectProperties.objectProperties("add_single", "VRayRenderableCurve", nodes=nodes, name="renderCurveProperties")
 
 Fore more information about the objectProperties functions have a look at the :doc:`objectProperties` documentation.
+
+Starting a V-ray render
+-----------------------
+
+To start a vray render you can simply do:
+
+.. code-block:: python
+
+    import vrayformayaUtils as vfm
+
+    vfm.vrayRender()
+
+To start baking using the bake settings in your scene (eg. VRayBakeOptions object properties):
+*This example is based on how the vrayStartBake mel script works.*
+
+.. code-block:: python
+
+    import vrayformayaUtils as vfm
+
+    currentLayer = mc.editRenderLayerGlobals(q=1, currentRenderLayer=True)
+    vfm.vrayRender(camera="persp", layer=currentLayer, bake=True)
+
+There's also a reimplementation of the mel command which does exactly the same as above.
+
+.. code-block:: python
+
+    import vrayformayaUtils as vfm
+
+    vfm.vrayStartBake()
