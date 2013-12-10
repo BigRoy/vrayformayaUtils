@@ -16,9 +16,6 @@ A couple of focuses for vrayformayaUtils are:
 
 - Fast and easy to use
 
-On the to-do list is adding a framework around objectProperties and then we should have covered the two
-main areas (attributes and objectProperties) that benefit from automatisation.
-
 There might be a focus in the future to do some (PySide?) GUI elements that aid in the v-ray for maya workflow.
 
 
@@ -28,7 +25,6 @@ You can find the documentation for this library/framework at:
 
 ####[vrayformayaUtils Documentation](http://www.colorbleed.nl/docs/vrayformayaUtils/index.html)
 
-
 ### Why use this framework?
 
 - Get started fast!
@@ -37,10 +33,19 @@ You can find the documentation for this library/framework at:
 - User-friendly.
 - There's actually documentation for it. :)
 
+###### Implementations
+
+Currently implemented features are:
+
+- V-ray Attributes
+- V-ray Object Properties (currently experimental, need testing whether the designed scripting interface suffices.)
+- V-ray Render Elements (in ``core`` Module)
+- Some convenience functions like ``vrayRender``, ``vrayStartBake``, ``loadVray``.
+
 
 ### Examples
 
-Example code can also be found in the documentation. (see documentation)
+Example code can also be found in the documentation. (see [documentation](http://www.colorbleed.nl/docs/vrayformayaUtils/index.html))
 
 
 ### Appendices
